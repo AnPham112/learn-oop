@@ -6,16 +6,17 @@ using System.Threading.Tasks;
 
 namespace PizzaStore
 {
-    public class Pizza
+    public abstract class Pizza
     {
         protected string name;
         protected string dough;
         protected string sauce;
-        protected List<string> toppings;
+        protected List<string> toppings = new List<string>();
+        protected string type;
 
         public void Prepare()
         {
-            Console.WriteLine("Preparing" + name);
+            Console.WriteLine("Preparing " + name);
             Console.WriteLine("Tossing dough...");
             Console.WriteLine("Adding sauce...");
             Console.WriteLine("Adding toppings...");
@@ -32,7 +33,7 @@ namespace PizzaStore
             Console.WriteLine("Cutting " + name);
         }
 
-        public void Box()
+        public virtual void Box()
         {
             Console.WriteLine("Boxing " + name);
         }
