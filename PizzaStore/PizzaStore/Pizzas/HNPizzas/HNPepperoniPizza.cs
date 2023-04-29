@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PizzaStore.Pizzas;
 
-namespace PizzaStore
+namespace PizzaStore.Pizzas.HCMPizzas
 {
-    public class PepperoniPizza: Pizza
+    public class HNPepperoniPizza : Base.Pizza
     {
-        public PepperoniPizza() {
+        public HNPepperoniPizza()
+        {
             name = "The best pepperoni pizza";
             dough = "Thick dough";
             sauce = "Sweet sauce";

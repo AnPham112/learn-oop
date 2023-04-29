@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using PizzaStore.Store;
 
 namespace PizzaStore
 {
@@ -7,11 +8,12 @@ namespace PizzaStore
     {
         static void Main(string[] args)
         {
-            var pizzaStore  = new PizzaStore();
-            pizzaStore.OrderPizza("cheese");
-            pizzaStore.OrderPizza("greek");
-            pizzaStore.OrderPizza("pepperoni");
-            pizzaStore.OrderPizza("ahihi");
+            var hnPizzaStore  = new HNPizzaStore();
+            hnPizzaStore.OrderPizza("cheese");
+
+            var hcmPizzaStore = new HCMPizzaStore();
+            hcmPizzaStore.OrderPizza("cheese");
+
         }
     }
 }
